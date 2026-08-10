@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Club Sportivo y Cultural</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="logo-container">
+            <img src="img/Logo.jpg" alt="Escudo del Club Sportivo y Cultural">
+
+            <div>
+                <h1>Club Sportivo y Cultural</h1>
+                <p>Sistema de gestión de socios</p>
+            </div>
+        </div>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="welcome">
+            <h2>Control de socios</h2>
+
+            <p>
+                Consultá el estado de un socio y verificá
+                si está habilitado para ingresar.
+            </p>
+        </section>
+
+        <section class="search-card">
+
+            <h3>Buscar socio</h3>
+
+            <p>
+                Ingresá el DNI o nombre del socio
+            </p>
+
+            <form id="searchForm">
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Ej: 12345678"
+                    autocomplete="off"
+                >
+
+                <button type="submit">
+                    Buscar
+                </button>
+
+            </form>
+
+        </section>
+
+        <section id="resultado" class="result-card">
+
+            <h3>Resultado</h3>
+
+            <div class="empty-result">
+                <span>👤</span>
+
+                <p>
+                    Buscá un socio para consultar su estado.
+                </p>
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>Club Sportivo y Cultural</p>
+        <span>Sistema de gestión de socios</span>
+
+    </footer>
+
+
+    <script src="js/app.js"></script>
+
+</body>
+
+</html>
