@@ -141,3 +141,110 @@ formulario.addEventListener("submit", function (evento) {
         `;
     }
 });
+
+// =========================
+// LISTADO DE SOCIOS
+// =========================
+
+const listaSocios = document.getElementById("listaSocios");
+
+
+function mostrarSocios(lista) {
+
+    listaSocios.innerHTML = "";
+
+    if (lista.length === 0) {
+
+        listaSocios.innerHTML = `
+            <div class="empty-result">
+
+                <span>🔎</span>
+
+                <p>
+                    No encontramos socios.
+                </p>
+
+            </div>
+        `;
+
+        return;
+    }
+
+
+    lista.forEach(function (socio) {
+
+        const tarjeta = document.createElement("div");
+
+        tarjeta.classList.add("socio-card");
+
+        tarjeta.innerHTML = `
+
+            <div class="socio-info">
+
+                <h4>
+                    ${socio.nombre}
+                    ${socio.apellido}
+                </h4>
+
+                <p>
+                    DNI: ${socio.dni}
+                </p>
+
+            </div>
+
+
+            <span class="estado-socio estado-activo">
+                Activo
+            </span>
+
+        `;
+
+        listaSocios.appendChild(tarjeta);
+
+    });
+
+}
+
+// Mostrar todos los socios al entrar
+mostrarSocios(socios);
+
+// =========================
+// NAVEGACIÓN
+// =========================
+
+const navBuscar = document.getElementById("navBuscar");
+const navSocios = document.getElementById("navSocios");
+const navCuotas = document.getElementById("navCuotas");
+
+const seccionBusqueda = document.getElementById("seccionBusqueda");
+const seccionSocios = document.getElementById("seccionSocios");
+
+
+// Mostrar búsqueda
+navBuscar.addEventListener("click", function (evento) {
+
+    evento.preventDefault();
+
+    seccionBusqueda.classList.remove("hidden");
+    seccionSocios.classList.add("hidden");
+
+    navBuscar.classList.add("active");
+    navSocios.classList.remove("active");
+    navCuotas.classList.remove("active");
+
+});
+
+
+// Mostrar socios
+navSocios.addEventListener("click", function (evento) {
+
+    evento.preventDefault();
+
+    seccionBusqueda.classList.add("hidden");
+    seccionSocios.classList.remove("hidden");
+
+    navBuscar.classList.remove("active");
+    navSocios.classList.add("active");
+    navCuotas.classList.remove("active");
+
+});

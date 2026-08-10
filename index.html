@@ -22,67 +22,168 @@
 
     <header class="header">
 
-        <div class="logo-container">
-            <img src="img/Logo.jpg" alt="Escudo del Club Sportivo y Cultural">
+        <nav class="nav">
 
-            <div>
-                <h1>Club Sportivo y Cultural</h1>
-                <p>Sistema de gestión de socios</p>
+            <div class="nav-container">
+
+                <a href="#" class="nav-link active" id="navBuscar">
+                    🔎 Buscar socio
+                </a>
+
+                <a href="#" class="nav-link" id="navSocios">
+                    👥 Socios
+                </a>
+
+                <a href="#" class="nav-link" id="navCuotas">
+                    💰 Cuotas
+                </a>
+
             </div>
-        </div>
+
+        </nav>
 
     </header>
 
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main class="container">
 
-        <section class="welcome">
-            <h2>Control de socios</h2>
+            <!-- =========================
+                SECCIÓN BUSCAR SOCIO
+            ========================== -->
 
-            <p>
-                Consultá el estado de un socio y verificá
-                si está habilitado para ingresar.
-            </p>
-        </section>
+            <section id="seccionBusqueda">
 
-        <section class="search-card">
+                <section class="welcome">
 
-            <h3>Buscar socio</h3>
+                    <h2>Control de socios</h2>
 
-            <p>
-                Ingresá el DNI o nombre del socio
-            </p>
+                    <p>
+                        Consultá el estado de un socio y verificá
+                        si está habilitado para ingresar.
+                    </p>
 
-            <form id="searchForm">
+                </section>
 
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Ej: 12345678"
-                    autocomplete="off"
-                >
 
-                <button type="submit">
-                    Buscar
-                </button>
+                <!-- BUSCADOR -->
 
-            </form>
+                <section class="search-card">
 
-        </section>
+                    <h3>Buscar socio</h3>
 
-        <section id="resultado" class="result-card">
+                    <p>
+                        Ingresá el DNI o nombre del socio
+                    </p>
 
-            <h3>Resultado</h3>
+                    <form id="searchForm">
 
-            <div class="empty-result">
-                <span>👤</span>
+                        <input
+                            type="text"
+                            id="searchInput"
+                            placeholder="Ej: 12345678"
+                            autocomplete="off"
+                        >
 
-                <p>
-                    Buscá un socio para consultar su estado.
-                </p>
-            </div>
+                        <button type="submit">
+                            Buscar
+                        </button>
 
-        </section>
+                    </form>
+
+                </section>
+
+
+                <!-- RESULTADO -->
+
+                <section id="resultado" class="result-card">
+
+                    <h3>Resultado</h3>
+
+                    <div class="empty-result">
+
+                        <span>👤</span>
+
+                        <p>
+                            Buscá un socio para consultar su estado.
+                        </p>
+
+                    </div>
+
+                </section>
+
+            </section>
+
+
+            <!-- =========================
+                SECCIÓN SOCIOS
+            ========================== -->
+
+            <section id="seccionSocios" class="hidden">
+
+                <section class="welcome">
+
+                    <h2>Socios</h2>
+
+                    <p>
+                        Administrá los socios del Club Sportivo y Cultural.
+                    </p>
+
+                </section>
+
+
+                <!-- BUSCADOR DE SOCIOS -->
+
+                <section class="search-card">
+
+                    <h3>Buscar socio</h3>
+
+                    <form id="searchSociosForm">
+
+                        <input
+                            type="text"
+                            id="searchSociosInput"
+                            placeholder="Nombre, apellido o DNI"
+                            autocomplete="off"
+                        >
+
+                        <button type="submit">
+                            Buscar
+                        </button>
+
+                    </form>
+
+                </section>
+
+
+                <!-- LISTADO -->
+
+                <section class="result-card">
+
+                    <div class="socios-header">
+
+                        <h3>Listado de socios</h3>
+
+                        <button
+                            type="button"
+                            class="btn-primary"
+                            id="btnNuevoSocio"
+                        >
+                            + Nuevo socio
+                        </button>
+
+                    </div>
+
+
+                    <div id="listaSocios">
+
+                        <!-- JavaScript colocará los socios acá -->
+
+                    </div>
+
+                </section>
+
+            </section>
 
     </main>
 
