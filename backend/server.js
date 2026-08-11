@@ -2,7 +2,11 @@ const pool = require('./database/connection');
 
 const express = require('express');
 
+const sociosRoutes = require('./routes/socios.routes');
+
 const app = express();
+
+app.use('/api/socios', sociosRoutes);
 
 const PORT = 3000;
 
